@@ -1,164 +1,88 @@
-/* Reset default spacing and sizing */
-* {
+/*Google Fonts Import*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+/* Global reset and background */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  background-color: #fffffb;
+  font-family: 'Open Sans', sans-serif; /* optional: set default font */
+  color: #000000; /* optional: default text color */
 }
 
-/* Apply to all body content */
-body {
-  font-family: sans-serif;
-  line-height: 1.6;
-  color: #222;
-  background-color: white;
-  padding: 2rem;
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 142.5px;
+  margin-top: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
 }
 
-/* Header layout */
-header {
-  display: flex;                    /* Places items side-by-side */
-  justify-content: space-between;  /* Pushes name left, nav right */
-  align-items: center;             /* Vertically aligns nav + name */
-  padding: 1rem 2rem;              /* Adds spacing inside header */
-  background-color: #fff;          /* White background */
-  border-bottom: 1px solid #ddd;   /* Subtle line under header */
-  position: sticky;                /* Keeps header on top while scrolling */
-  top: 0;
-  z-index: 1000;                   /* Keeps it above other content */
-}
-
-/* Style the main heading */
-header h1 {
-  font-size: 6rem;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Style nav links */
-nav a {
-  margin-left: 1rem;
+.navigation a{
   text-decoration: none;
-  color: #007acc;
+  color: #000000;
   font-weight: 600;
+  padding-bottom: 0;
+  position: relative;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.navigation a:hover{
+
+  color: #0047ff
 }
 
-/* About Section Styles */
-#about {
-  max-width: 8000px;            /* limits width for readability */
-  margin: 1rem auto;           /* centers the section horizontally */
-  padding: 2rem;               /* adds spacing inside the section */
-  background-color: #ffffff;   /* white background */
-  border-radius: 10px;         /* rounded corners */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);  /* subtle shadow */
+.navigation a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 130%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #0047ff, transparent);
+  transition: transform 0.4s ease;
 }
 
-/* Section heading */
-#about h2 {
-  margin-bottom: 1rem;
-  color: #333;
-  font-size: 4rem;
+.navigation a:hover::after {
+   transform: translateX(-50%) scaleX(1);
+}
+
+.header{
+  display: flex;
+  justify-content: center;
   text-align: center;
+  margin-top: 300px;
+  font-family: 'Space Mono', monospace;
+  font-size: 100px;
+  font-weight: bolder;
+  color: #0047ff;
+  line-height: 0.96;
+  opacity: .82
 }
 
-/* Paragraphs in about section */
-#about p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #444;
-}
-
-/* Make project cards responsive with grid */
-#projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  gap: 1.5rem;
-}
-
-#projects h2 {
-  grid-column: 1 / -1;
+.subheader{
+  display: flex;
+  justify-content: center;
   text-align: center;
-  font-size: 4rem;
-  margin-bottom: 2rem;
-  color: #222;
+  margin-top: -32px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #000000;
+  text-shadow: 2.2px 2.2px 0px #a6a6a6;
+  position: relative;
 }
 
-
-/* Project category grid wrapper and header */
-.project-category {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.project-category h3 {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: bold;
-  padding: 0.5rem;
-  background-color: #f3f3f3;
-  border-radius: 6px;
-  color: #333;
-}
-
-.project-card{
-  max-width: 8000px;            /* limits width for readability */
-  margin: 1rem auto;           /* centers the section horizontally */
-  padding: 2rem;               /* adds spacing inside the section */
-  background-color: #ffffff;   /* white background */
-  border-radius: 10px;         /* rounded corners */
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);  /* subtle shadow */
-}
-
-/* Add hover effect to project cards */
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Contact Section Styles */
-#contact {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: #fdfdfd;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-  text-align: center;
-}
-
-#contact h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-#contact p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-#contact a {
-  color: #007acc;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-#contact a:hover {
-  text-decoration: underline;
-}
-
-/* Optional: Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  color: #666;
-  font-size: 0.9rem;
+.subheader::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  transform-origin: center;
+  width: 30%;
+  height: 5px;
+  background: linear-gradient(to right, transparent, #a6a6a6, transparent);
 }
