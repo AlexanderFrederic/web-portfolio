@@ -10,23 +10,18 @@
 <body>
 
   <!-- HEADER -->
-  <header>
+  <header id="title">
     <!-- Navigation menu with links -->
      <nav class="navigation">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
-            <a href="#resume">Resume</a>
-            <a href="#social">Socials</a>
+            <a href="#resumes">Resume</a>
+            <a href="#socials">Socials</a>
             <a href="#contact"> Contact</a>
      </nav>
     <!-- Your name/logo -->
-     <h1 class="header">
-      Alexander<br>Frederic        
-     </h1>
-     
-     <h1 class="subheader">
-      Computer Engineer
-     </h1>
+     <h1 class="header">Alexander<br>Frederic</h1>
+     <h1 class="subheader">Computer Engineer</h1>
   </header>
 
   <!-- MAIN CONTENT -->
@@ -34,134 +29,82 @@
     
     <!-- ABOUT SECTION -->
     <section id="about">
-      <!-- Heading and short bio -->
-       <h2>
-        About Me
-       </h2>
+      <h2 class="header">About Me</h2>
 
-       <p>
-        I'm a <strong>Computer Engineer</strong> from Rutgers New Brunswick 
-        with a passion for <strong>Web/App Development, Cyber Security,</strong>
-        and <strong>Video Game Development.</strong>
-        What makes me stand out is my love for learning, inability 
-        to stop at a problem till I solve it, and my ability to 
-        shine with people who work with me and shine alone as well.
-        I'm currently looking for a position that will last me for
-        at least 10 years. I'm interested in growing in a company and 
-        creating something that will be remembered for a lifetime!
-       </p>
+      <div class="tab-group">
+        <h3 class="navigation">
+          <button class="tab" data-target="introduction">Introduction</button>
+          <button class="tab" data-target="education">Education</button>
+          <button class="tab" data-target="experience">Experience</button>
+          <button class="tab" data-target="skillset">Skillset</button>
+        </h3>
+
+        <div class="tab-content" id="introduction"></div>
+        <div class="tab-content" id="education"></div>
+        <div class="tab-content" id="experience"></div>
+        <div class="tab-content" id="skillset"></div>
+
+      </div>
+
     </section>
 
     <!-- PROJECTS SECTION -->
     <section id="projects">
-      <!-- Project grid with cards -->
-      <h2>
-        Projects
-      </h2>
+      <h2 class="header">Projects</h2>
+      
+      <div class="tab-group">
+        <h3 class="navigation">
+         <button class="tab" data-target="undergrad">Undergrad</button>
+         <button class="tab" data-target="personal">Personal</button>
+         <button class="tab" data-target="professional">professional</button>
+        </h3>
 
-      <div class="project-category">
-        <h3>Undergrad</h3>
+        <div class="tab-content" id="undergrad"></div>
+        <div class="tab-content" id="personal"></div>
+        <div class="tab-content" id="professional"></div>
 
-        <div class="project-card">
-          <h4>
-            Mobile App for Task Management  - (React Native/Firebase)
-          </h4>
-          <p>
-            Built a cross-platform mobile app for task management 
-            with real-time updates, and task organization, Integrated 
-            Firebase Authentication, and Firestore.
-          </p>
-        </div>
-
-        <div class="project-card">
-          <h4>
-            Machine Learning Models - (Jupyter/Python)
-          </h4>
-          <p>
-            Developed supervised ML models for classification and 
-            regression tasks using real-world datasets.
-          </p>
-        </div>
-        
-        <div class="project-card">
-          <h4>
-            Online Clothing Store - (HTML/CSS/ JavaScript/PayPal)
-          </h4>
-          <p>
-          Collaborated with a team to build a functional online 
-          store with interactive product pages, cart features, 
-          and PayPal sandbox integration.
-          </p>
-        </div>
-          
-        <div class="project-card">
-          <h4>
-            Data Structure Implementations - (Java)
-          </h4>
-          <p>
-            Implemented core data structures including linked 
-            lists, stacks, queues, trees, and hash maps.
-          </p>
-        </div>
-          
-        <div class="project-card">
-          <h4>
-            Network Socket Programs - (C Language)
-          </h4>
-          <p>
-            Developed low-level TCP/UDP socket programs to 
-            simulate basic network communication between clients 
-            and servers.
-          </p>
-        </div>
-      </div>
-
-      <div class="project-category">
-        <h3>Personal</h3>
-        <!--Projects Coming Soon-->
-        <div class="project-card">
-          <h4>
-            Coming Soon!
-          </h4>
-          <p>...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-          </p>
-        </div>
-      </div>
-
-      <div class="project-category">
-       <h3>Professional</h3>
-       <!--Projects Coming Soon-->
-       <div class="project-card">
-          <h4>
-            Coming Soon!
-          </h4>
-          <p>...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-            ...........................
-          </p>
-        </div>
       </div>
 
     </section>
 
+    <!-- RESUME SECTION -->
+    <section id="resumes">
+      <h2 class="header">Resumes</h2>
+
+      <div class="tab-group">
+        <h3 class="navigation">
+          <button class="tab" data-target="general">General</button>
+          <button class="tab" data-target="web-app-dev">Web/App Dev</button>
+          <button class="tab" data-target="cyber-security">Cyber Security</button>
+          <button class="tab" data-target="game-dev">Game Dev</button>
+        </h3>
+        
+        <div class="tab-content" id="general"> </div>
+        <div class="tab-content" id="web-app-dev"></div>
+        <div class="tab-content" id="cyber-security"></div>
+        <div class="tab-content" id="game-dev"></div>
+
+      </div>
+
+
+
+
+    </section>
+
+    <!-- SOCIALS SECTION -->
+    <section id="socials">
+       <h2 class="header">
+        Socials
+       </h2>
+
+    </section> 
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
     <!-- CONTACT SECTION -->
     <section id="contact">
-      <!-- Contact info or form -->
-       <h2>
+       <h2 class="header">
         Contact Me
        </h2>
        <p>
@@ -170,16 +113,10 @@
        <a href="mailto:atf45@scarletmail.rutgers.edu">
           atf45@scarletmail.rutgers.edu
        </a>
-
     </section>
-
-  </main>
-
-  <!-- Optional FOOTER -->
-  <footer>
-    <!-- Footer content -->
   </footer>
 
   <!-- JavaScript goes here -->
+  <script src="script.js"></script>
 </body>
 </html>

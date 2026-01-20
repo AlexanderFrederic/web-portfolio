@@ -12,45 +12,6 @@ body {
   color: #000000; /* optional: default text color */
 }
 
-.navigation {
-  display: flex;
-  justify-content: center;
-  gap: 142.5px;
-  margin-top: 30px;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
-}
-
-.navigation a{
-  text-decoration: none;
-  color: #000000;
-  font-weight: 600;
-  padding-bottom: 0;
-  position: relative;
-}
-
-.navigation a:hover{
-
-  color: #0047ff
-}
-
-.navigation a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  width: 130%;
-  height: 3px;
-  background: linear-gradient(to right, transparent, #0047ff, transparent);
-  transition: transform 0.4s ease;
-}
-
-.navigation a:hover::after {
-   transform: translateX(-50%) scaleX(1);
-}
-
 .header{
   display: flex;
   justify-content: center;
@@ -68,16 +29,21 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: -32px;
   font-family: 'Josefin Sans', sans-serif;
+  color: #000000;
+  position: relative;
+  margin-top: -32px;
   font-size: 50px;
   font-weight: bolder;
-  color: #000000;
   text-shadow: 2.2px 2.2px 0px #a6a6a6;
-  position: relative;
+
 }
 
-.subheader::after {
+.subheader :hover{
+  color: #0047ff
+}
+
+.subheader::after{
   content: "";
   position: absolute;
   bottom: -10px;
@@ -85,4 +51,77 @@ body {
   width: 30%;
   height: 5px;
   background: linear-gradient(to right, transparent, #a6a6a6, transparent);
+}
+
+
+button {
+  all: unset; /* removes default styles */
+  cursor: pointer;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 142.5px;
+  margin-top: 30px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+}
+
+.navigation a,
+.navigation button{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  padding-bottom: 0;
+  position: relative;
+}
+
+.navigation a:hover,
+.navigation button:hover{
+
+  color: #a6a6a6
+}
+
+.navigation a::after,
+.navigation button::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 130%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #a6a6a6, transparent);
+  transition: transform 0.4s ease;
+}
+
+.navigation a:hover::after, 
+.navigation button:hover::after{
+   transform: translateX(-50%) scaleX(1);
+}
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
+.tab.active {
+  color: #0047ff;
+  font-weight: bold;
+  /* Optional underline with ::after */
+  position: relative;
+}
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130%;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #0047ff, transparent);
 }
