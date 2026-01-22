@@ -76,8 +76,7 @@ button {
 
 .navigation a:hover,
 .navigation button:hover{
-  
-  text-shadow: 1.5px 1.5px 0px #a6a6a6;
+ text-shadow: 1.5px 1.5px 0px #a6a6a6;
 }
 
 .navigation a::after,
@@ -103,7 +102,7 @@ button {
   display: none;
 }
 .tab-content.active {
-  display: block;
+  display: grid;
 }
 
 .tab.active {
@@ -126,4 +125,18 @@ button {
   width: 130%;
   height: 3px;
   background: linear-gradient(to right, transparent, #0047ff, transparent);
+}
+
+.subtitle{
+  color: #545454;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+}
+
+.tab-content.active#introduction{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* spacing between them */
+  text-align: center;
+  margin-top: 30px;
 }
