@@ -39,9 +39,6 @@ body {
 
 }
 
-.subheader :hover{
-  color: #0047ff
-}
 
 .subheader::after{
   content: "";
@@ -62,30 +59,30 @@ button {
 .navigation {
   display: flex;
   justify-content: center;
-  gap: 142.5px;
+  gap: 130.5px;
   margin-top: 30px;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
+  font-size: 37px;
 }
 
 .navigation a,
 .navigation button{
   text-decoration: none;
   color: #000000;
-  font-weight: 600;
+  font-weight: 300;
   padding-bottom: 0;
   position: relative;
 }
 
 .navigation a:hover,
 .navigation button:hover{
-
-  color: #a6a6a6
+  
+  text-shadow: 1.5px 1.5px 0px #a6a6a6;
 }
 
 .navigation a::after,
-.navigation button::after {
-  content: "";
+.navigation button::after{
+ content: "";
   position: absolute;
   bottom: -5px;
   left: 50%;
@@ -112,9 +109,14 @@ button {
 .tab.active {
   color: #0047ff;
   font-weight: bold;
-  /* Optional underline with ::after */
+  text-shadow: 1.5px 1.5px 0px #a0b5fe;  /* Optional underline with ::after */
   position: relative;
 }
+
+.tab.active:hover{
+  text-shadow: 1.5px 1.5px 0px #a0b5fe;
+}
+
 .tab.active::after {
   content: '';
   position: absolute;
