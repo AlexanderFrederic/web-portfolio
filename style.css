@@ -105,6 +105,25 @@ button {
   display: grid;
 }
 
+#about .tab::before{
+  content: "";
+  position: absolute;
+  top: -50px; /* position ABOVE the text */
+  left: 50%;
+  
+  width: 6px;
+  height: 6px;
+  background-color: #545454;
+  border-radius: 50%;
+
+
+}
+
+#about .tab:nth-child(odd)::before{
+  transform: translateY(-40px);
+}
+
+
 .tab.active {
   color: #0047ff;
   font-weight: bold;
@@ -114,6 +133,12 @@ button {
 
 .tab.active:hover{
   text-shadow: 1.5px 1.5px 0px #a0b5fe;
+}
+
+#about .tab.active::before{
+  width: 8px;
+  height: 8px;
+  background-color: #0047ff;
 }
 
 .tab.active::after {
@@ -162,4 +187,9 @@ button {
     margin-top: 120px;
   }
 }
+
+
+
+
+
 
