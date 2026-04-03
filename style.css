@@ -65,6 +65,19 @@ button {
   font-size: 40px;
 }
 
+#about .navigation{
+  margin-top: 140px;
+}
+
+#projects .navigation{
+  margin-top: 180px;
+  gap: 100px;
+}
+
+#resumes .navigation{
+  margin-top: 180px;
+}
+
 .navigation a,
 .navigation button{
   text-decoration: none;
@@ -110,19 +123,131 @@ button {
   position: absolute;
   top: -50px; /* position ABOVE the text */
   left: 50%;
-  
   width: 6px;
   height: 6px;
   background-color: #545454;
   border-radius: 50%;
-
-
 }
 
 #about .tab:nth-child(odd)::before{
   transform: translateY(-40px);
 }
 
+#about .tab.active::before{
+  width: 8px;
+  height: 8px;
+  background-color: #0047ff;
+}
+
+#projects .tab::before{
+  content: "";
+  position: absolute;
+  top: -110px; /* position ABOVE the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 53px solid #d9d9d9;
+}
+
+#projects .tab.active::before{
+  border-top: 53px solid #0047ff;
+  border-bottom: none;
+}
+
+#projects .tab span::before{
+  content: "";
+  position: absolute;
+  top: -103px; /* position ABOVE the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-bottom: 43px solid #fffffb;
+}
+
+#projects .tab.active span::before{
+  top: -104px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 34px solid #fffffb;
+  border-bottom: none;
+}
+
+#resumes .tab span::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -120px; /* position ABOVE the text */
+  width: 40px;
+  height: 40px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+}
+
+#resumes button.tab:nth-child(1) span::before{
+  transform: translateX(770%);
+}
+#resumes button.tab:nth-child(2) span::before{
+  transform: translateX(320%);
+}
+#resumes button.tab:nth-child(3) span::before{
+  transform: translateX(-280%);
+}
+#resumes button.tab:nth-child(4) span::before{
+  transform: translateX(-810%);
+}
+
+#resumes button.tab.active:nth-child(1) span::before{
+  transform: translateX(500%);
+}
+#resumes button.tab.active:nth-child(2) span::before{
+  transform: translateX(200%);
+}
+#resumes button.tab.active:nth-child(3) span::before{
+  transform: translateX(-200%);
+}
+#resumes button.tab.active:nth-child(4) span::before{
+  transform: translateX(-550%);
+}
+
+#resumes button.tab.active:nth-child(1) span::after{
+  transform: translateX(550%);
+}
+#resumes button.tab.active:nth-child(2) span::after{
+  transform: translateX(223%);
+}
+#resumes button.tab.active:nth-child(3) span::after{
+  transform: translateX(-214%);
+}
+#resumes button.tab.active:nth-child(4) span::after{
+  transform: translateX(-595%);
+}
+
+
+#resumes .tab.active span::before{
+  width: 60px;
+  height: 60px;
+  background-color: #a0b5fe;
+  top: -130px;
+}
+
+#resumes .tab.active span::after{
+  content: "";
+  position: absolute;
+  top: -127.5px; /* position ABOVE the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 55px;
+  background-color: #0047ff;
+  border-radius: 50%;
+}
 
 .tab.active {
   color: #0047ff;
@@ -133,12 +258,6 @@ button {
 
 .tab.active:hover{
   text-shadow: 1.5px 1.5px 0px #a0b5fe;
-}
-
-#about .tab.active::before{
-  width: 8px;
-  height: 8px;
-  background-color: #0047ff;
 }
 
 .tab.active::after {
